@@ -1,13 +1,18 @@
 const express = require("express");
-const fs = require("fs");
 const app = express();
 
-// app.use((req, res, nx) => {
-//   res.sendFile(`${__dirname}/public/index.html`);
-// });
-app.use("/home/foo/bar", (request, response) => {
-  response.sendStatus(404).send("Not found");
+app.set("view engine", "ejs");
+
+app.use("/contacts", (req, res) => {
+  res.render("contacts", {
+    title: "Мои контакты",
+    emailsVisible: true,
+    emails: ["gavgav@mycorp.com", "mioaw@mycorp.com"],
+    phone: "+1234567890",
+  });
 });
 
-app.get("/", (req, res) => {});
+app.use("/", (req, res) => {
+  res.send("Main page");
+});
 app.listen(8000);
