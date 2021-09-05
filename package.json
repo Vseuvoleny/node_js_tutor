@@ -1,0 +1,26 @@
+{
+  "name": "testapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha *.spec.js*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vseuvoleny/node_js_tutor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vseuvoleny/node_js_tutor/issues"
+  },
+  "homepage": "https://github.com/Vseuvoleny/node_js_tutor#readme",
+  "devDependencies": {
+    "mocha": "^9.1.1",
+    "supertest": "^6.1.6"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
